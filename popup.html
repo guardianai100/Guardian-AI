@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mdbootstrap.min.css" />
+
+    <title>Document</title>
+    <style>
+      body {
+        width: 400px;
+        height: 500px;
+        background-color: #20202c;
+        color: white !important;
+      }
+      input[type="text"] {
+        background-color: #20202c;
+        color: white !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-body-tertiary">
+      <div class="container-fluid justify-content-center">
+        <a class="navbar-brand">
+          <img
+            src="icon.png"
+            class="me-2"
+            height="30"
+            alt="Guardian AI"
+            loading="lazy"
+          />
+          <small class="text-white">Guardian AI</small>
+        </a>
+      </div>
+    </nav>
+
+    <div class="container mt-2">
+      <div class="row mt-1 mb-1">
+        <form id="scan_wallet_form">
+          <!-- Email input -->
+          <div data-mdb-input-init class="form-outline mb-3">
+            <input
+              type="text"
+              id="walletAddress"
+              class="form-control form-control-lg"
+              required
+            />
+            <label class="form-label text-white" for="walletAddress"
+              >Enter Wallet Address</label
+            >
+          </div>
+          <div id="submit_btn_div">
+            <button
+              data-mdb-ripple-init
+              type="submit"
+              class="btn btn-block text-white"
+              style="background-color: #3c91ff"
+            >
+              Scan Wallet
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <div class="text-center mt-1">
+        <canvas id="myCanvas" width="300" height="170">
+      </div>
+      <p id="status"></p>
+      <div id="report_btn_div"></div>
+
+      
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="mdbootstrap.min.js"></script>
+    <script src="guage.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
